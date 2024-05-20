@@ -365,3 +365,5 @@ dist/.github/
 TestResults/
 obj/
 coverage/
+
+.idea/
