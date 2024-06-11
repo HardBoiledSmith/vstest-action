@@ -22,5 +22,5 @@ export function getVsTestPath(): string {
   // }
   //
   // return path.join(__dirname, 'win-x64/VsTest/v160/Common7/IDE/Extensions/TestPlatform/vstest.console.exe')
-  return path.join(__dirname, 'win-x64/TestPlatform/vstest.console.exe')
+  return path.join(__dirname, 'TestPlatform/vstest.console.exe')
 }
