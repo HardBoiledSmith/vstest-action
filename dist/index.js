@@ -1125,7 +1125,7 @@ function getVsTestPath() {
     //     return path.join(__dirname, 'win-x64/VsTest/v150/Common7/IDE/Extensions/TestPlatform/vstest.console.exe');
     // }
     // return path.join(__dirname, 'win-x64/VsTest/v160/Common7/IDE/Extensions/TestPlatform/vstest.console.exe');
-    return path.join(__dirname, 'win-x64/TestPlatform/vstest.console.exe')
+    return path.join(__dirname, 'TestPlatform/vstest.console.exe')
 }
 exports.getVsTestPath = getVsTestPath;
 
@@ -4860,12 +4860,12 @@ function run() {
             // DELETE THIS LINE
             // yield exec.exec(`powershell Invoke-WebRequest -Uri "https://aka.ms/local-worker-win-x64" -OutFile ${workerZipPath}`);
             core.info(`Unzipping test tools...`);
-            core.debug(`workerZipPath is ${workerZipPath}`);
+            core.info(`workerZipPath is ${workerZipPath}`);
             yield exec.exec(`powershell Expand-Archive -Path ${workerZipPath} -DestinationPath ${__dirname}`);
             let vsTestPath = getVsTestPath_1.getVsTestPath();
-            core.debug(`VsTestPath: ${vsTestPath}`);
+            core.info(`VsTestPath: ${vsTestPath}`);
             let args = getArguments_1.getArguments();
-            core.debug(`Arguments: ${args}`);
+            core.info(`Arguments: ${args}`);
             core.info(`Running tests...`);
             yield exec.exec(`${vsTestPath} ${testFiles.join(' ')} ${args} /Logger:TRX`);
         }
