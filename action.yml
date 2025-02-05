@@ -57,7 +57,7 @@ inputs:
   resultLogsArtifactName:
     description: "Test result logs artifact name"
     required: true
-    default: "test-results"
+    default: "vstest_results"
 
   ifNoFilesFound:
     description: >
