@@ -46,7 +46,7 @@ export async function uploadArtifact() {
 
       const artifactClient = create()
       const options: UploadOptions = {
-        continueOnError: false
+        continueOnError: true
       }
       if (inputs.retentionDays) {
         options.retentionDays = inputs.retentionDays
