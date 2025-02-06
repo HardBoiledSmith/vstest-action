@@ -40,11 +40,13 @@ export async function run() {
   }
 
   // Always attempt to upload test result artifact
+  /*
   try {
     await uploadArtifact();
   } catch (err) {
     core.setFailed(err.message)
   }
+  */
 }
 
 run()
