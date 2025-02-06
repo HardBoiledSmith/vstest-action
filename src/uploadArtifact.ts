@@ -33,11 +33,6 @@ export async function uploadArtifact() {
       }
     } else {
       const s = searchResult.filesToUpload.length === 1 ? '' : 's'
-
-      core.info(
-        `[HBsmith]skip uploading due bypass action error. found files:  ${searchResult.filesToUpload}`
-      )
-      return
       
       core.info(
         `With the provided path, there will be ${searchResult.filesToUpload.length} file${s} uploaded`
