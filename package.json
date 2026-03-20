@@ -27,7 +27,7 @@
     "@types/node": "^12.12.62",
     "@types/semver": "^6.2.2",
     "@zeit/ncc": "^0.21.1",
-    "jest": "^27.5.1",
+    "jest": "^30.3.0",
     "jest-mock-extended": "^2.0.5",
     "jest-when": "^3.5.1",
     "mock-fs": "^5.1.2",
